@@ -39,3 +39,37 @@ def local():
 
 print(foo)
 local()
+'''
+function that accepts price as an argument and
+returns price with gst added,
+if your does not pass gst per default value should 5%,
+also provide optional arguments to pass shipping rate 
+'''
+
+def mrp(price,gst=5,shipping=0):
+    gst = (price * gst) / 100
+    total = price + shipping + gst
+    return [gst/2,total,price]
+
+def printBill(price,discount=0):
+    def mrp(price, gst=5, shipping=0):
+        gst = (price * gst) / 100
+        total = price + shipping + gst
+        return [gst / 2, total, price]
+
+    gst, mrp, price = mrp(price)
+    print(f'''
+        Price: {price}
+        SGST : {gst}
+        CGST : {gst}
+        --------------
+        Total : {mrp}
+    ''')
+# print(mrp(100))
+# print(mrp(100,12))
+# print(mrp(100,12,30))
+# print(mrp())
+
+[gst,total,price]=mrp(100)
+printBill(100)
+

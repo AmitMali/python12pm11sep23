@@ -3,6 +3,9 @@
 # while no<=10:
 #     print(no)
 #     no=no+1
+#
+#
+no=1
 
 # def myRange(start,end,step=1):
 #     no = start
@@ -20,4 +23,11 @@ def printNumberTable(num):
 
 
 
-printNumberTable(2)
+# printNumberTable(2)
+
+# nums=range(1,11)
+# print(list(nums))
+
+# for num in range(1,11):
+#     if num%2==0:
+#         print(num)

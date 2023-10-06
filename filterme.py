@@ -553,6 +553,8 @@ products= [
     }
   ]
 
-import lambdaMapFilter
+import lambdaMapFilter as lmf
 
-lambdaMapFilter.filterBy('brand','Apple',products)
+lmf.filterBy('brand','Apple',products)
+
+# print(list(filter(lambda product:product['price']>300,products)))
